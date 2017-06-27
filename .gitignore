@@ -24,6 +24,6 @@ nbproject
 /dist/
 /bin/
 
-# Ignore gradle filesa
+# Ignore gradle files
 .gradle
-
+*.iml
