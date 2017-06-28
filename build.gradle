@@ -1,3 +1,5 @@
+def projectVersion = '0.0.6'
+
 buildscript {
 	ext {
 		springBootVersion = '1.5.4.RELEASE'
@@ -15,8 +17,8 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+version = "${projectVersion}"
 
 repositories {
     mavenLocal()
@@ -39,7 +41,15 @@ dependencies {
 
 jar {
     baseName = 'scalping'
-    version =  '0.1.0'
+    version = "$projectVersion"
 }
 
+task printProperties {
+    doLast {
+        println jar.baseName
+        println jar.version
+    }
+}
+
+apply plugin: 'application'
 mainClassName = 'com.marketram.ScalpingApplication'
