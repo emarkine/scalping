@@ -1,4 +1,4 @@
-package com.marketram.entities;
+package com.marketram.domain;
 
 import javax.persistence.*;
 

@@ -1,6 +1,6 @@
 package com.marketram.utils;
 
-import com.marketram.entities.User;
+import com.marketram.domain.User;
 import com.marketram.repositories.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
