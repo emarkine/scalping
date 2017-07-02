@@ -1,5 +1,6 @@
 package com.marketram;
 
+import com.marketram.config.JpaConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -12,6 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class ScalpingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ScalpingApplication.class, args);
+		SpringApplication.run(
+				SpringApplication.run(new Class<?>[] {ScalpingApplication.class, JpaConfig.class}, args));
 	}
 }

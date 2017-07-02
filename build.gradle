@@ -29,14 +29,16 @@ dependencies {
     compile 'joda-time:joda-time:2.2'
 	compile 'org.springframework.boot:spring-boot-starter'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'com.zaxxer:HikariCP:2.6.3'
 	runtime 'org.postgresql:postgresql'
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.springframework.security:spring-security-test'
     testCompile 'org.springframework:spring-test'
     testCompile 'junit:junit'
-    testCompile 'org.springframework.security:spring-security-test:4.0.1.RELEASE'
 }
 
 jar {
