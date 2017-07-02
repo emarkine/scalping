@@ -54,4 +54,4 @@ task printProperties {
 }
 
 apply plugin: 'application'
-mainClassName = 'com.marketram.ScalpingApplication'
+mainClassName = 'com.marketram.Application'

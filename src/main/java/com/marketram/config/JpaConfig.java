@@ -1,6 +1,6 @@
 package com.marketram.config;
 
-import com.marketram.ScalpingApplication;
+import com.marketram.Application;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +19,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackageClasses = ScalpingApplication.class)
+@EnableJpaRepositories(basePackageClasses = Application.class)
 public class JpaConfig implements TransactionManagementConfigurer {
 
     @Value("${spring.datasource.driver-class-name}")
