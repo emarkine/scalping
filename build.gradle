@@ -6,10 +6,12 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+        mavenLocal()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+        classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.8.2'
+    }
 }
 
 apply plugin: 'java'
@@ -26,7 +28,7 @@ repositories {
 }
 
 dependencies {
-    compile 'joda-time:joda-time:2.2'
+    compile 'com.javafx:scenario:1.0.1'
 	compile 'org.springframework.boot:spring-boot-starter'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'org.springframework.boot:spring-boot-starter-jdbc'
@@ -46,6 +48,12 @@ jar {
     version = "$projectVersion"
 }
 
+apply plugin: 'javafx-gradle-plugin'
+jfx {
+    mainClass = 'com.marketram.Scalping'
+    vendor = 'EugeneLab'
+}
+
 task printProperties {
     doLast {
         println jar.baseName
@@ -54,4 +62,4 @@ task printProperties {
 }
 
 apply plugin: 'application'
-mainClassName = 'com.marketram.Application'
+mainClassName = 'com.marketram.Scalping'
